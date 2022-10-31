@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body{
+        background-color: black;
+        margin: 0%;
+    }
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 10%;
+        background-color: black;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+    }
+    li a {
+        display: block;
+        color: white;
+        padding: 8px 16px;
+        text-decoration: none;
+        text-align: center;
+    }
+    li a.active {
+        color: white;
+    }
+    li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+    }
+    h1{
+        color: white;
+        text-align: center;
+    }
+    h2{
+        color: white;
+        text-align: center;
+    }
+    form{
+            padding:10px;
+            width:500px;
+            margin-left:auto;
+            margin-right: auto;
+            color: white;
+    }
+  
+</style>
+<body>
+    <br> <br> <br>
+  <div class="h1"><h1>Harveen Anand</h1></div>  
+  <ul>
+    <li>
+        <a href="home.html">
+            <i class="fa fa-home w3-xxlarge"></i>
+            <p>HOME</p>
+        </a>
+    </li>
+    <li>
+        <a href="aboutme.html">
+            <i class="fa fa-user w3-xxlarge"></i>
+            <p>ABOUT</p>
+          </a>
+    </li>
+    <li>
+        <a href="photos.html">
+            <i class="fa fa-eye w3-xxlarge"></i>
+            <p>PHOTOS</p>
+          </a>
+    </li>
+    <li> <a href="contact.html">
+        <i class="fa fa-envelope w3-xxlarge"></i>
+        <p>CONTACT</p>
+    </li>
+  </ul>
+  <h2>Contact Me</h2>
+    <form action="https://oim-apis.herokuapp.com/form"method="post">
+        
+        <fieldset>
+            <legend>Your Information:</legend>
+            <div>
+            <label for="Name">Name:</label>
+            <input
+            type="text"
+            placeholder="Enter your name here"
+            size="30"
+            id="input-name"
+            name="Name"
+            />
+            </div>
+        <div>
+            <label for="input-email">Email:</label>
+            <input type="text"
+            placeholder="Enter your email here"
+            size="30"
+            id="input-email"
+            name="Email"
+            />
+        </div>
+        <div>
+            What do you think of this portfolio:
+        </div>
+        <div>
+            <label>
+                <input type="radio" name="satisfaction" value="great"/>Great </label>
+                <label>
+                <input type="radio" name="satisfaction" value="awesome"/>Awesome</label>
+                <label>
+                <input type="radio" name="satisfaction" value="good"/>Good</label>
+        </div>
+        <div>
+            <label for="comments">Comments:</label>
+        </div>
+        <div>
+            <textarea id="comments"
+            name="comments"
+            rows="5"
+            cols="25"
+            ></textarea>
+        </div>
+        <div>
+            <label class="container">Sign me up for email updates
+                <input type="checkbox" id="checkbox" name="checkbox" checked>
+                <span class="checkmark"></span>
+            </label>
+          </div>
+          <div>
+            <button type="submit">Submit
+            </button>
+            <input type="reset" value="Reset"/>
+        </div>
+    </form>
+  
+</body>
+</html>
