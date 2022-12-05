@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .navbar {
+        overflow: auto;
+        background-color: #957;
+        position: fixed;
+        top: 0ch;
+        height: 100%;
+        width: 10%;
+        padding: 0;
+        margin: 0;
+    }
+    .navbar a{
+        display: block;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    .navbar a:hover {
+        background-color: #957DAD;
+    }
+    .body{
+        margin-left: 15%;
+        margin-right: 5%;
+        text-decoration: underline white;
+    }
+    table{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    table, th, td, tr{
+        border: 1px solid;
+        padding: 15px;
+        text-align: center;
+        color: rgb(1, 44, 1);
+    }
+    h1{
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+    }
+    h3{
+        text-align: center;
+    }
+    
+</style>
+</head>
+<body>
+    <ul class="navbar">
+        <br><br><br><br><br><br>
+        <li>
+            <a href="home.html">
+                <i class="fa fa-home w3-xxlarge"></i>
+                <p>HOME</p>
+            </a>
+        </li>
+        <li>
+            <a href="aboutme.html">
+                <i class="fa fa-user w3-xxlarge"></i>
+                <p>ABOUT</p>
+              </a>
+        </li>
+        <li>
+            <a href="photos.html">
+                <i class="fa fa-eye w3-xxlarge"></i>
+                <p>PROJECTS</p>
+              </a>
+        </li>
+        <li> <a href="contact.html">
+            <i class="fa fa-envelope w3-xxlarge"></i>
+            <p>CONTACT</p>
+        </li>
+      </ul>
+    <div class="body">
+    <div class="head"><h1>Hydroponics Project</h1></div>
+    <h2>Designing a Vertical Tower Garden</h2>
+    <p1>About 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam consequatur adipisci, perspiciatis culpa corrupti repellat, cum perferendis quaerat obcaecati ducimus harum suscipit ipsam accusantium. Iure veritatis natus aperiam aspernatur minus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate expedita, iure animi minima ducimus dolores et quia provident cupiditate inventore repellat facere debitis accusantium corporis consequatur reiciendis, enim maiores. Animi!
+    </p1>
+    <h2>Design Situation</h2>
+    <p>needs statement 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ad quidem omnis odit. Corporis quos nihil enim, harum repellat voluptates. Amet obcaecati omnis, veniam quisquam autem a voluptatum modi libero!
+    </p>
+    <h2>User and Market research</h2>
+    <h3>User Survey</h3>
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+    <h3>Existing Product Analysis</h3>
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Image</th>
+            <th>Company</th>
+            <th>Material</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Vertical Tower Garden</td>
+            <td><img src="Images\competitor research1.jpg" alt="tower garden 1" height="200px"></td>
+            <td>Alibaba</td>
+            <td>PVC</td>
+            <td>$250</td>
+        </tr>
+        <tr>
+            <td>Click and Grow Smart Garden 3</td>
+            <td><img src="Images\competitor research2.jpg" alt="click and grow" height="200px"></td>
+            <td>Click and Grow</td>
+            <td>PLA</td>
+            <td>$100</td>
+        </tr>
+    </table>
+
+    <h3>Design Specifications</h3>
+   
+    <h3>Idea Development</h3>
+    <h3>Idea 1</h3>
+    <img src="Images\idea1.png" alt="idea 1" height="200px" class="center">
+    <img src="Images\idea1extra.png" alt="working" height="200px" class="center">
+    <h3>Idea 2</h3>
+    <img src="Images\idea2.png" alt="idea 2" height="200px" class="center">
+    <img src="Images\idea2extra.png" alt="working" height="200px" class="center">
+    <h3>Idea 3</h3>
+    <img src="Images\idea3.png" alt="idea 3" height="200px" class="center">
+    <img src="Images\idea3extra.png" alt="working" height="200px" class="center">
+    <h3>Idea 4</h3>
+    <img src="Images\idea4.png" alt="idea 4" height="200px" class="center">
+    <img src="Images\idea4extra.png" alt="working" height="200px" class="center">
+
+    <h3>User Feedback</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste fuga, cupiditate corrupti, magnam quibusdam repudiandae laboriosam officiis minima, illo consectetur beatae voluptatem. Quo aspernatur deleniti a facere, tenetur eius quaerat?</p>
+    <h3>Evaluation against design specifications</h3>
+</div> 
+
+</body>
+<script>
+    const xValues = ["Extremely Unlikely", "Somewhat Unlikely", "Not sure", "Somewhat Likely", "Extremely Likely"];
+    const yValues = [5.4, 5.4, 21.4, 21.4, 46.4];
+    const pieColors = [
+      "#b91d47",
+      "#00aba9",
+      "#2b5797",
+      "#e8c3b9",
+      "#1e7145"
+    ];
+    
+    new Chart("myChart", {
+      type: "pie",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: pieColors,
+          data: yValues
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Likeliness of consumers to invest in a hydroponic kitchen garden"
+        }
+      }
+    });
+    </script>
+</html>
