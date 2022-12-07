@@ -142,4 +142,34 @@
     </form>
   
 </body>
+<script>
+    const form=document.getElementById("form");
+    const name=document.getElementById("input-name");
+    const email=document.getElementById("input-email");
+    const button=document.getElementById("submit");
+    button.addEventListener("click", (e)=>{
+        e.preventDefault();
+        checkPuts();
+    });
+    function checkPuts(){
+        const nameValue=name.value.trim();
+        const emailValue=email.value.trim();
+
+        if(nameValue === ""){
+            setErrorFor(name,"Name is empty");
+        } else{
+            setYesFor(name);
+        }
+
+    if (emailValue === ""){
+        setErrorFor(email,"Email is empty");
+    } else if (!isEmail(emailValue)){
+        setErrorFor(email, "Not valid");
+    } else{
+        setYesFor(email);
+    }
+    }
+
+    setErrorFor=(input,message)
+</script>
 </html>
